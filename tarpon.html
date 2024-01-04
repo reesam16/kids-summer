@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="app.css">
+    <title>Tarpon Springs</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav id="mainNavbar" class="navbar fixed-top navbar-expand-md py-0" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">CGW</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navLinks">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="tampa.html">Tampa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stPet.html">St.Pet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tarpon.html">Tarpon Springs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- full image -->
+    <div class="full-img" id="fullImgBox">
+        <img src="images/tp-1.jpeg" id="fullImg" alt="">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+
+
+    <!-- fluid img -->
+    <div class="row m-5" id="wrapper">
+        <div class="col-xl-4 col-md-6 mb-1 align-self-center">
+            <img class="img-fluid" src="assets/tarp1 copy.jpg" onclick="openFullImg(this.src)" alt="">
+        </div>
+
+        <div class="col-xl-4 col-md-6 mb-1 align-self-center">
+            <img class="img-fluid" src="assets/tarp2 copy.jpg" onclick="openFullImg(this.src)" alt="">
+        </div>
+        <div class="col-xl-4 col-md-6 mb-1 align-self-center">
+            <img class="img-fluid" src="assets/tarp3 copy.jpg" onclick="openFullImg(this.src)" alt="">
+        </div>
+        <div class="col-xl-4 col-md-6 mb-1 align-self-center">
+            <img class="img-fluid" src="assets/tarp4 copy.jpg" onclick="openFullImg(this.src)" alt="">
+        </div>
+    </div>
+
+
+
+
+    <!-- jquery first its an old verson, then popper.js, then bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                const $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            })
+        })
+    </script>
+
+    <!-- JS to expand the images -->
+    <script src="jsimg.js"></script>
+
+</body>
+
+</html>
