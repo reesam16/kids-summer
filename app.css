@@ -95,7 +95,7 @@ body {
 
 .full-img img {
     width: auto;
-    max-width: 50%;
+    max-width: 65%;
 }
 
 .full-img span {
@@ -105,4 +105,25 @@ body {
     font-size: 30px;
     color: white;
     cursor: pointer;
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 1px 10px;
 }
+
+.full-img span:hover{
+    background-color: rgba(118, 248, 118, 0.722);
+    transition: .5s;
+}
+@media (max-width: 600px) {
+    .full-img img{
+        max-width:90%;
+    }
+}
+
+
+
+
+    
+
+
+
